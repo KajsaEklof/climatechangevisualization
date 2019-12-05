@@ -113,6 +113,15 @@ export default class AllCharts extends Component {
               CO2data={this.state.CO2Emission}/>
             )}
           />
+          <Route
+          path="/climatechangevisualization/"
+          render={props => (
+            <MyLineChart {...props}
+            Glacierdata={this.state.GlacierSize}
+            SeaLeveldata={this.state.SeaLevel}
+            CO2data={this.state.CO2Emission}/>
+          )}
+        />
           <Route path="/notfound" component={NotFound} />
           <Redirect from="/" exact to="/co2"></Redirect>
           <Redirect to="/notfound" />
